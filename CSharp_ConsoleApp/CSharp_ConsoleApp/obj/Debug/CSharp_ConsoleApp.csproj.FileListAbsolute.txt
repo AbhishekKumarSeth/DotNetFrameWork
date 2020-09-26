@@ -1,0 +1,6 @@
+C:\Users\Abhishek Kumar Seth\source\repos\CSharp_ConsoleApp\CSharp_ConsoleApp\obj\Debug\CSharp_ConsoleApp.csprojAssemblyReference.cache
+C:\Users\Abhishek Kumar Seth\source\repos\CSharp_ConsoleApp\CSharp_ConsoleApp\bin\Debug\CSharp_ConsoleApp.exe.config
+C:\Users\Abhishek Kumar Seth\source\repos\CSharp_ConsoleApp\CSharp_ConsoleApp\bin\Debug\CSharp_ConsoleApp.exe
+C:\Users\Abhishek Kumar Seth\source\repos\CSharp_ConsoleApp\CSharp_ConsoleApp\bin\Debug\CSharp_ConsoleApp.pdb
+C:\Users\Abhishek Kumar Seth\source\repos\CSharp_ConsoleApp\CSharp_ConsoleApp\obj\Debug\CSharp_ConsoleApp.exe
+C:\Users\Abhishek Kumar Seth\source\repos\CSharp_ConsoleApp\CSharp_ConsoleApp\obj\Debug\CSharp_ConsoleApp.pdb
