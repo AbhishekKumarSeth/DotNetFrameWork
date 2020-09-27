@@ -10,7 +10,10 @@ namespace CSharp_ConsoleApp
     {
         static void Main(string[] args)
         {
-            new EmailManager().SendEmail();
+            new OTPManager().GenerateOTP();
+            //new EmailManager().SendEmail();
+
+            Console.ReadKey();
         }
     }
 }

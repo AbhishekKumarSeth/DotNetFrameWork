@@ -2,4 +2,46 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/CSharp_ConsoleApp/.vs/CSharp_ConsoleApp/v16/Server/sqlite3/storage.ide-shm
+# User-specific files
+*.suo
+*.user
+*.sln.docstates
+*.vsspc
+
+# Build results
+**/[Dd]ebug/
+**/[Dd]ebugPublic/
+**/[Rr]elease/
+**/[Rr]eleases/
+**/x64/
+**/x86/
+**/build/
+**/bld/
+**/[Bb]in/
+**/[Oo]bj/
+
+# Visual Studio profiler
+*.psess
+*.vsp
+*.vspx
+
+# Visual Studio cache/options directory
+.vs/
+
+# NuGet Packages
+*.nupkg
+# The packages folder can be ignored because of Package Restore
+**/[Pp]ackages/*
+# except build/, which is used as an MSBuild target.
+!**/[Pp]ackages/build/
+# Uncomment if necessary however generally it will be regenerated when needed
+#!**/[Pp]ackages/repositories.config
+# NuGet v3's project.json files produces more ignorable files
+*.nuget.props
+*.nuget.targets
+
+/CSharp_ConsoleApp/.vs/
+/CSharp_ConsoleApp/CSharp_ConsoleApp/obj
+/CSharp_ConsoleApp/CSharp_ConsoleApp/obj/Debug
+/CSharp_ConsoleApp/CSharp_ConsoleApp/bin
+/CSharp_ConsoleApp/CSharp_ConsoleApp/Properties

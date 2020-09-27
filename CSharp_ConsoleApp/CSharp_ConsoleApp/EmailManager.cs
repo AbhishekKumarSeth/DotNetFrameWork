@@ -18,8 +18,8 @@ namespace CSharp_ConsoleApp
         string recepient_BCC = ConfigurationManager.AppSettings["Recipient_BCC"];
         public void SendEmail()
         {
-			try
-			{
+            try
+            {
                 var from = new MailAddress(fromEmail);
                 var to = new MailAddress(recepient_TO);
 
@@ -50,10 +50,10 @@ namespace CSharp_ConsoleApp
                 };
                 smtp.Send(mail);
             }
-			catch (Exception ex)
-			{
-				throw ex;
-			}
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }
