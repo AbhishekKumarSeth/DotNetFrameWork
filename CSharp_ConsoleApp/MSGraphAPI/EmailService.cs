@@ -146,7 +146,9 @@ namespace MSGraphAPI
 
             AuthenticationResult result = await app.AcquireTokenForClient(scopes).ExecuteAsync();
 
-            return result.AccessToken;
+            _token = result.AccessToken;
+
+            return _token;
         }
 
         public async Task Connect()
@@ -163,7 +165,7 @@ namespace MSGraphAPI
                                     })
                     );
 
-                _token = await GetToken();
+                //_token = await GetToken();
             }
             catch (Exception)
             {
