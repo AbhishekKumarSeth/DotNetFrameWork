@@ -10,6 +10,7 @@ namespace CSharp_ConsoleApp
     {
         static void Main(string[] args)
         {
+            //ExcelService.ConvertDataTableToExcel();
             new OTPManager().GenerateOTP();
             //new EmailManager().SendEmail();
 
