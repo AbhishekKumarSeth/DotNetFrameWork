@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CSharp_ConsoleApp
 {
-    public class ZIPServie
+    public class ZIPService
     {
         public static void CreateZip()
         {

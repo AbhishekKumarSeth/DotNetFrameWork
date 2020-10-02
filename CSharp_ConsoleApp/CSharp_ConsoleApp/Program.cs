@@ -10,8 +10,10 @@ namespace CSharp_ConsoleApp
     {
         static void Main(string[] args)
         {
+            ZIPService.CreateZip();
+            ZIPService.ExtratZIPFile();
             //ExcelService.ConvertDataTableToExcel();
-            new OTPManager().GenerateOTP();
+            //new OTPManager().GenerateOTP();
             //new EmailManager().SendEmail();
 
             Console.ReadKey();
