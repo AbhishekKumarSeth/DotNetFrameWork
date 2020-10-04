@@ -8,6 +8,18 @@ namespace CSharp_ConsoleApp.Model
 {
     public class Employee
     {
+        // initialize with test data
+        public static Employee GetEmployeeData()
+        {
+            Employee emp = new Employee();
+            emp.ID = Guid.NewGuid();
+            emp.FullName = "Abhishek Kumar";
+            emp.DOB = DateTime.UtcNow;
+            emp.DOJ = DateTime.UtcNow;
+            emp.Designation = "Architect";
+            return emp;
+        }
+
         public Guid ID { get; set; }
         public string FullName { get; set; }
         public string ContactNo { get; set; }

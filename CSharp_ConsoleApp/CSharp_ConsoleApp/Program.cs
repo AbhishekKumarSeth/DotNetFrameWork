@@ -10,6 +10,8 @@ namespace CSharp_ConsoleApp
     {
         static void Main(string[] args)
         {
+            ExcelService.ReadExcel();
+            //ExcelService.CreateExcel();
             //SQLHelper.InsertDataToSql();
             //SQLHelper.UpdateData();
             //QRCodeService.GenerateQR();

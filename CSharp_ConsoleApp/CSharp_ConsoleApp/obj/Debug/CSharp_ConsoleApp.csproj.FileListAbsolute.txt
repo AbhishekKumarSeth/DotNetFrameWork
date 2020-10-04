@@ -13,3 +13,7 @@ D:\DotNetFrameWork\CSharp_ConsoleApp\CSharp_ConsoleApp\obj\Debug\CSharp_ConsoleA
 D:\DotNetFrameWork\CSharp_ConsoleApp\CSharp_ConsoleApp\bin\Debug\EPPlus.dll
 D:\DotNetFrameWork\CSharp_ConsoleApp\CSharp_ConsoleApp\bin\Debug\EPPlus.xml
 D:\DotNetFrameWork\CSharp_ConsoleApp\CSharp_ConsoleApp\obj\Debug\CSharp_ConsoleApp.csproj.CopyComplete
+D:\DotNetFrameWork\CSharp_ConsoleApp\CSharp_ConsoleApp\bin\Debug\DotNetZip.dll
+D:\DotNetFrameWork\CSharp_ConsoleApp\CSharp_ConsoleApp\bin\Debug\DotNetZip.pdb
+D:\DotNetFrameWork\CSharp_ConsoleApp\CSharp_ConsoleApp\bin\Debug\DotNetZip.xml
+D:\DotNetFrameWork\CSharp_ConsoleApp\CSharp_ConsoleApp\bin\Debug\QRCoder.dll

@@ -64,7 +64,6 @@
     <Compile Include="OTPManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Content Include="temp.txt" />
     <Compile Include="QRCodeService.cs" />
     <Compile Include="SQLHelper.cs" />
     <Compile Include="ZIPService.cs" />

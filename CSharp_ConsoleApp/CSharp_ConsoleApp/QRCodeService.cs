@@ -19,9 +19,13 @@ namespace CSharp_ConsoleApp
             QRCode qrCode = new QRCode(qrCodeData);
             Bitmap qrCodeImage = qrCode.GetGraphic(20);
 
+            //Set color by using Color-class types
+            //Bitmap qrCodeImage = qrCode.GetGraphic(20, Color.DarkRed, Color.PaleGreen, true)
+
             //Set color by using HTML hex color notation
             //Bitmap qrCodeImage = qrCode.GetGraphic(20, "#000ff0", "#0ff000");
 
+            //The another overload enables you to render a logo / image in the center of the QR code.
             //Bitmap qrCodeImage = qrCode.GetGraphic(20, Color.Black, Color.White, (Bitmap)Bitmap.FromFile(@"D:\Temp Doc\QR\sample.jpeg"));
 
             string outputFileName = @"D:\Temp Doc\QR\QRCode.png";

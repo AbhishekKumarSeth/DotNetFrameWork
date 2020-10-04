@@ -15,10 +15,12 @@ namespace CSharp_ConsoleApp
         static string connString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ToString();
         static string[] auditColumnList = { "CreatedBy", "CreatedDate", "ModifiedBy", "ModifiedDate" };
 
+        #region Insert Data
+
         public static void InsertDataToSql()
         {
             var userId = Guid.NewGuid();
-            Employee emp = GetEmployeeData();
+            Employee emp = Employee.GetEmployeeData();
 
             using (SqlConnection conn = new SqlConnection(connString))
             {
@@ -36,29 +38,7 @@ namespace CSharp_ConsoleApp
                 }
             }
         }
-
-        private static Employee GetEmployeeData()
-        {
-            Employee emp = new Employee();
-            emp.ID = Guid.NewGuid();
-            emp.FullName = "Abhishek Kumar";
-            emp.DOB = DateTime.UtcNow;
-            emp.DOJ = DateTime.UtcNow;
-            emp.Designation = "Architect";
-            return emp;
-        }
-
-        public static void UpdateData()
-        {
-            var userId = Guid.NewGuid();
-            Employee emp = GetEmployeeData();
-            emp = UpdateAuditColumnValue<Employee>(emp, userId);
-
-            Console.WriteLine(emp.CreatedBy);
-            Console.WriteLine(emp.CreatedDate);
-            Console.WriteLine(emp.ModifiedBy);
-            Console.WriteLine(emp.ModifiedDate);
-        }
+        
 
         private static Tuple<string, SqlParameter[]> CreateInsertQuery<T>(T item, string tableName, Guid curretUserId) where T : new()
         {
@@ -114,7 +94,23 @@ namespace CSharp_ConsoleApp
             return new Tuple<string, SqlParameter[]>(query, parameters);
         }
 
-        private static T UpdateAuditColumnValue<T>(T item, Guid currentUserId) where T : class
+        #endregion
+
+        #region Update field value
+
+        public static void UpdateData()
+        {
+            var userId = Guid.NewGuid();
+            Employee emp = Employee.GetEmployeeData();
+            emp = UpdateAuditColumnValue<Employee>(emp, userId);
+
+            Console.WriteLine(emp.CreatedBy);
+            Console.WriteLine(emp.CreatedDate);
+            Console.WriteLine(emp.ModifiedBy);
+            Console.WriteLine(emp.ModifiedDate);
+        }
+
+        public static T UpdateAuditColumnValue<T>(T item, Guid currentUserId) where T : class
         {
             Type t = typeof(T);
             PropertyInfo[] propertiesInfo = t.GetProperties();
@@ -140,5 +136,7 @@ namespace CSharp_ConsoleApp
 
             return item;
         }
+
+        #endregion
     }
 }
