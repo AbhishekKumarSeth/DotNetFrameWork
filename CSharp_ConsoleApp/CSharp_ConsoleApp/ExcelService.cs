@@ -57,13 +57,10 @@ namespace CSharp_ConsoleApp
 
         public static void CreateExcel()
         {
-            Employee emp = Employee.GetEmployeeData();
-            emp = SQLHelper.UpdateAuditColumnValue<Employee>(emp, Guid.NewGuid());
+            //emp = SQLHelper.UpdateAuditColumnValue<Employee>(emp, Guid.NewGuid());
 
-            var employees = new List<Employee>();
-            employees.Add(emp);
-            employees.Add(emp);
-
+            var employees = Employee.GetAllEmployeeData();
+            
             using (ExcelPackage package = new ExcelPackage())
             {
                 CreateSpreadsheet<Employee>(package, "Employee Data", employees);

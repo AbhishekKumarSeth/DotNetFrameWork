@@ -95,48 +95,5 @@ namespace CSharp_ConsoleApp
         }
 
         #endregion
-
-        #region Update field value
-
-        public static void UpdateData()
-        {
-            var userId = Guid.NewGuid();
-            Employee emp = Employee.GetEmployeeData();
-            emp = UpdateAuditColumnValue<Employee>(emp, userId);
-
-            Console.WriteLine(emp.CreatedBy);
-            Console.WriteLine(emp.CreatedDate);
-            Console.WriteLine(emp.ModifiedBy);
-            Console.WriteLine(emp.ModifiedDate);
-        }
-
-        public static T UpdateAuditColumnValue<T>(T item, Guid currentUserId) where T : class
-        {
-            Type t = typeof(T);
-            PropertyInfo[] propertiesInfo = t.GetProperties();
-            foreach (PropertyInfo prop in propertiesInfo)
-            {
-                var propName = prop.Name;
-                switch (propName)
-                {
-                    case "CreatedBy":
-                        prop.SetValue(item, currentUserId);
-                        break;
-                    case "CreatedDate":
-                        prop.SetValue(item, DateTime.UtcNow);
-                        break;
-                    case "ModifiedBy":
-                        prop.SetValue(item, currentUserId);
-                        break;
-                    case "ModifiedDate":
-                        prop.SetValue(item, DateTime.UtcNow);
-                        break;
-                }
-            }
-
-            return item;
-        }
-
-        #endregion
     }
 }
